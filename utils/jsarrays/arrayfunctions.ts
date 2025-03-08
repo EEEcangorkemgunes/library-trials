@@ -17,13 +17,12 @@ export function ArrayForEach() {
   });
   return My_Array;
 }
-
 export function ArrayMap() {
   return My_Array.map((item) => {
-    if (item.age > 30) {
-      return item;
+    if (item.age > 25) {
+      return true;
     }
-  });
+  }).filter((item)=>item);
 }
 
 export function ArrayFilter() {
