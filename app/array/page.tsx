@@ -1,4 +1,4 @@
-import { ArrayForEach, ArrayMap, ArrayFilter } from "@/utils/jsarrays/arrayfunctions";
+import { ArrayForEach, ArrayMap, ArrayFilter, ArraySome } from "@/utils/jsarrays/arrayfunctions";
 import ListReturn from "@/utils/jsfunctions/functionreturn";
 import { MapSet } from "@/utils/jsmaps/jsmap";
 
@@ -8,6 +8,7 @@ export default function Home() {
   const Filter = ArrayFilter();
   const Lists = ListReturn();
   const map = MapSet();
+  const some  = ArraySome();
   return (
     <>
       <h1>Array Functions</h1>
@@ -24,6 +25,9 @@ export default function Home() {
       <br />
       <h2>Map Set</h2>
       <div>{JSON.stringify(map)}</div>
+      <br />
+      <h2>Array Some</h2>
+      <div>{JSON.stringify(some)}</div>
     </>
   );
 }

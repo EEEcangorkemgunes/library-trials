@@ -10,6 +10,7 @@ const My_Array = [
   { id: 9, name: "John", age: 28 },
   { id: 10, name: "Jane", age: 23 },
 ];
+const My_List = [];
 
 export function ArrayForEach() {
   My_Array.forEach((item) => {
@@ -22,14 +23,21 @@ export function ArrayMap() {
     if (item.age > 25) {
       return true;
     }
-  }).filter((item)=>item);
+  }).filter((item) => item);
 }
 
 export function ArrayFilter() {
   return My_Array.filter((item) => {
     if (item.age > 30) {
-      item.age = 30;
+      //item.age = 30;
     }
+    return true;
+  });
+}
+
+export function ArraySome() {
+  console.log(My_Array);
+  return My_List.some((item) => {
     return true;
   });
 }
